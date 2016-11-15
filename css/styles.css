@@ -9,6 +9,7 @@
 body {
 background-image: url('../img/corkboard.jpg');
 margin: 0;
+font-size: 3em;
 }
 
 /*.img-responsive {
@@ -29,37 +30,52 @@ margin: 0;
   margin-left: auto;
 }
 
-.polaroid {
+.polaroid, .polaroid2 {
   position: relative;
   margin: 50px auto;
+  float: left;
   /*width: 945px;
   height: 1024px;*/
 }
 
-.polaroid:after {
+.polaroid-container {
+  position: relative;
+}
+
+.polaroid:after, .polaroid2:after {
   content: "";
   height: 640px;
   width: 640px;
-  /*background-color: red;*/
   position: absolute;
   top: 115px;
   left: 130px;
-  background-image: url('../img/gorilla.jpg');
-  /*background-size: cover;*/
-  /*background-color: red;*/
 }
 
-.polaroid:before {
+.polaroid:before, .polaroid2:before {
   content: "";
   height: 75px;
   width: 75px;
-  /*background-color: red;*/
   position: absolute;
   top: 35px;
   left: 400px;
-  /*background-repeat: no-repeat;*/
   background-image: url('../img/pin.png');
   background-size: cover;
   background-position: center;
-  /*background-color: red;*/
+}
+
+.polaroid:after {
+  background-image: url('../img/cat.jpg');
+}
+
+.polaroid2:after {
+  background-image: url('../img/gorilla.jpg');
+}
+
+.polaroid-container:after {
+  content: "gorillaaaaaa!!!";
+  height: 20px;
+  /*width: 640px;*/
+  position: absolute;
+  top: 860px;
+  left: 340px;
 }
